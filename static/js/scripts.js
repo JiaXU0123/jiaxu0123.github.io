@@ -7,12 +7,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
+    const scrollSpy = mainNav && new bootstrap.ScrollSpy(document.body, {
+        target: '#mainNav',
+        offset: 74,
+    });
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -47,17 +45,32 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Marked
     marked.use({ mangle: false, headerIds: false })
-    section_names.forEach((name, idx) => {
-        fetch(content_dir + name + '.md')
-            .then(response => response.text())
+    const sections = section_names.map(name => {
+        return fetch(content_dir + name + '.md')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Could not load ${name}.md (HTTP ${response.status})`);
+                }
+                return response.text();
+            })
             .then(markdown => {
                 const html = marked.parse(markdown);
                 document.getElementById(name + '-md').innerHTML = html;
-            }).then(() => {
-                // MathJax
-                MathJax.typeset();
-            })
-            .catch(error => console.log(error));
-    })
+            });
+    });
+
+    Promise.allSettled(sections).then(async results => {
+        for (const result of results) {
+            if (result.status === 'rejected') {
+                console.error(result.reason);
+            }
+        }
+
+        scrollSpy?.refresh();
+        if (window.MathJax?.startup?.promise) {
+            await window.MathJax.startup.promise;
+            await window.MathJax.typesetPromise();
+        }
+    }).catch(error => console.error(error));
 
 }); 

@@ -1,112 +1,216 @@
-@import "./styles.css";
-
-
-:root{
-    --h-title-color:#ff7215;
+:root {
+    --h-title-color: #ff7215;
 }
 
 .header {
-    border-bottom: solid 2px var(--bs-blue);
-    z-index: 10000;
+    border-bottom: 2px solid var(--bs-blue);
+}
+
+#mainNav {
+    padding-block: 0.625rem;
+}
+
+#mainNav .nav-link {
+    font-size: 0.875rem;
+}
+
+section[id] {
+    scroll-margin-top: 4.5rem;
+}
+
+.profile {
+    --profile-shade: linear-gradient(90deg, rgba(12, 20, 27, 0.94), rgba(12, 20, 27, 0.85) 36%, rgba(12, 20, 27, 0.16) 72%);
+    padding-block: clamp(2rem, 4vw, 4.5rem);
+    color: #fff;
+    background: var(--profile-shade), #26333c url('../assets/img/background.jpeg') center / cover no-repeat;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 34rem) auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.profile h1 {
+    margin: 0 0 0.65rem;
+    font-size: clamp(1.75rem, 4vw, 3.15rem);
+    line-height: 1.1;
+}
+
+.profile-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+}
+
+.profile-contact a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 0.25rem;
+}
+
+.profile-contact a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.profile-contact img {
+    filter: invert(1);
+}
+
+.profile .main-body {
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.profile .main-body h2 {
+    margin: 0 0 0.25rem;
+    font: inherit;
+    font-weight: 700;
+}
+
+.profile .main-body a {
+    color: inherit;
+    text-underline-offset: 0.15em;
+}
+
+.profile .main-body p:last-child {
+    margin-bottom: 0;
+}
+
+.profile-avatar {
+    width: clamp(7rem, 13vw, 11rem);
+    height: auto;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+.content-section {
+    padding-block: clamp(1.75rem, 4vw, 3rem);
+}
+
+.content-section header h2 {
+    margin: 0 0 0.875rem;
+    color: #9a480f;
+    font: 400 clamp(1.2rem, 2.2vw, 1.55rem) / 1.3 "Kanit", system-ui, sans-serif;
+}
+
+.content-section header i {
+    margin-right: 0.25rem;
+}
+
+.content-section .main-body {
+    font-size: 1rem;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.content-section .main-body h3 {
+    font-size: 1.2rem;
+}
+
+.content-section .main-body h4 {
+    font-size: 1.05rem;
+}
+
+#experience-md > h3 ~ h3 {
+    padding-top: 1.25rem;
+    border-top: 1px solid #dee2e6;
+}
+
+#experience-md > ul ul,
+.project-description,
+.project-demo figcaption {
+    font-size: 0.875rem;
+    line-height: 1.55;
+}
+
+.project-demo {
+    max-width: 52rem;
+    margin-bottom: 1.75rem;
+}
+
+.project-demo-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.project-demo-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+}
+
+.project-demo figcaption {
+    margin-top: 0.5rem;
+    color: #495057;
+}
+
+.content-section .main-body > :last-child {
+    margin-bottom: 0;
+}
+
+.bg-gradient-primary-to-secondary-light {
+    background: linear-gradient(45deg, #fcfcfc, #fff);
+}
+
+.bg-gradient-primary-to-secondary-gray {
+    background: linear-gradient(45deg, #f0f0f0, #f1f1f1);
 }
 
 .bg-bottom {
     background-color: var(--h-title-color);
 }
 
-.top-section {
-    position: relative;
-    padding: 10rem 0;
-    background-position: center;
-    background-size: cover;
-    height: 40rem;
-}
-
-.top-section h2 {
-    font-weight: 400;
-}
-
-.top-section .top-section-content {
-    position: relative;
-    z-index: 1;
-}
-
-.top-section:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-section header h2{
-    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-    color: var(--h-title-color);
-    font-size: 2.3rem;
-    line-height: 4rem;
-}
-
-section .main-body{
-    font-size: 1.3rem;
-    font-weight: 200;
-    line-height: 2.4rem;
-}
-
-
-.bg-gradient-primary-to-secondary-light {
-    background: linear-gradient(45deg, #fcfcfc, #ffffff) !important;
-}
-
-.bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #f0f0f0, #f1f1f1) !important;
-}
-
-
-
-.on-top {
-    position: relative;
-    z-index: 10000;
-}
-
-.top-bg {
-    background-position: center;
-    background-size: fill;
-    width: 100%;
-    height: 100%;
-}
-
-.top-bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-
-#avatar {
-    position: relative;
-    height: 0;
-    top:min(-65px,max(-100px,calc(-1*100vw/12)));
-    max-width: 55em;
-    margin: 0 1.5rem 0 0;
-    float: right;
-    z-index: 9000;
-}
-
-#avatar img {
-    height: max(130px,min(200px,calc(100vw/6)));
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 991px) {
-    #avatar {
-        margin: 0;
+@media (max-width: 991.98px) {
+    #navbarResponsive {
+        position: absolute;
+        inset: 100% 0 auto;
+        padding-inline: 1rem;
+        background-color: #fff;
+        border-bottom: 2px solid var(--bs-blue);
     }
 }
 
+@media (max-width: 767.98px) {
+    .profile {
+        --profile-shade: linear-gradient(90deg, rgba(12, 20, 27, 0.9), rgba(12, 20, 27, 0.71));
+    }
 
+    .profile-layout {
+        position: relative;
+        display: block;
+    }
+
+    .profile h1,
+    .profile-contact {
+        margin-right: 5rem;
+    }
+
+    .profile-contact {
+        font-size: 0.875rem;
+    }
+
+    .profile-avatar {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        width: 4.25rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .project-demo-images {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

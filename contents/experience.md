@@ -8,21 +8,39 @@ Worked on the development and optimization of large-scale recommendation systems
 - Designed and implemented real-time data processing workflows to improve model inference efficiency.  
 - Conducted A/B testing and performance analysis to refine recommendation strategies based on user behavior data.  
 Research Experience -->
-### **Research Assistant at the Lab of Brain Science and Brain-Inspired Intelligence** 
+### Data-Lab
 
-**Advisor: Prof. Guoyuan Yang**
+**School of Computer Science, Beijing Institute of Technology**\
+**Advisor:** [Prof. Chengliang Chai](https://cs.bit.edu.cn/szdw/jsml/bssds/110325d289024176b20e6ec7953dd80b.htm)
 
-**October 2023 – June 2025 | BIT**  
-#### Contributions:  
+#### [EditBanana](https://www.editbanana.net/)
+
+<p class="project-description">I contributed to image inpainting and text editing for EditBanana, a tool that converts static diagrams into editable elements.</p>
+
+<figure class="project-demo">
+    <div class="project-demo-images">
+        <img src="static/assets/img/editbanana-original.jpg" alt="Original static diagram illustrating three types of memory failures in agents" width="1024" height="565" loading="lazy">
+        <img src="static/assets/img/editbanana-reconstruction.png" alt="The same diagram reconstructed with independently editable text and graphic elements" width="1269" height="697" loading="lazy">
+    </div>
+    <figcaption>Original diagram followed by its editable reconstruction in EditBanana.</figcaption>
+</figure>
+
+### Lab of Brain Science and Brain-Inspired Intelligence
+
+**Research Assistant** · October 2023 – June 2025 · Beijing Institute of Technology\
+**Advisor:** Prof. Guoyuan Yang
+
+#### Contributions
+
 - CLIP-MSM Oct 2024 – Apr 2025：
 
     - Proposed a CLIP-based multi-semantic mapping framework that enables hypothesis-free, fine-grained, and more accurate prediction and interpretation of human high-level visual cortex responses to natural images.
     - Applied CLIP Dissection and normalize the semantic mapping score to achieve the mapping, which demonstrate better interpretability accuracy compared to Network Dissection.
     - Research outcomes contribute to a AAAI 2025 acception and the Beijing Natural Science Foundation’s “Qiyan”Program.
-- BrainLMM Mar 2025 – Present:
+- BrainLMM Mar 2025 – Oct 2025:
     - Introduced a label-free multi-semantic mapping framework that combines diverse vision encoders with a Describe-and-Dissect strategy to predict and interpret human high-level visual cortex responses without predefined labels.
     - Research outcomes contribute to a AAAI 2026 acception and National University Student Innovation & Entrepreneurship Development Program.
-- SAE-BrainMap May 2025 – Present
+- SAE-BrainMap May 2025 – Apr 2026
     - Developed a hypothesis-free framework that aligns deep neural network representations with human fMRI responses at voxel-level resolution, without relying on downstream prediction tasks.
     - Employed methods such as AutoDecoder and Self-Organizing Maps (SOM) to enable more interpretable cross-model.
     - Constructed a voxel dictionary by optimally assigning the most similar SAE feature to each voxel and exhibit ROI-consistent selectivity. comparisons of prediction outcomes.

@@ -1,16 +1,16 @@
-<a href="https://github.com/JiaXU0123">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" width="22">
-</a>
+<div class="profile-contact">
+  <a href="https://github.com/JiaXU0123" aria-label="GitHub">
+    <img src="static/assets/img/github.svg" alt="" width="20" height="20">
+  </a>
+  <span>aobensss at gmail.com</span>
+</div>
 
-<!-- I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX. -->
+## Education
 
-#### Email  
-<code>aobensss@gmail.com</code>  
+**Beijing Institute of Technology**, Master’s Student in Computer Technology (Present)\
+School of Computer Science, Data-Lab · Advised by [Prof. Chengliang Chai](https://cs.bit.edu.cn/szdw/jsml/bssds/110325d289024176b20e6ec7953dd80b.htm)\
+**Beijing Institute of Technology**, Bachelor of Computer Science (2022&nbsp;–&nbsp;2026)
 
-#### Education  
+## Research Interests
 
-**Beijing Institute of Technology**,  Bachelor of Computer Science (2022 – 2026)  
-<!-- • GPA: XX/XX -->
-
-#### Research Interests  
-Artificial Intelligenc, Multimodal Models, Computer Vision, Generate Models
+Artificial Intelligence, Multimodal Models, Computer Vision, Generative Models
